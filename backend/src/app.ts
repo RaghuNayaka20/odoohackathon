@@ -1,0 +1,22 @@
+import express from "express";
+import cors from "cors";
+import path from "node:path";
+import { env } from "./config/env.js";
+import authRoutes from "./routes/auth.routes.js";
+import employeeRoutes from "./routes/employee.routes.js";
+import attendanceRoutes from "./routes/attendance.routes.js";
+import leaveRoutes from "./routes/leave.routes.js";
+import payrollRoutes from "./routes/payroll.routes.js";
+import notificationRoutes from "./routes/notification.routes.js";
+import analyticsRoutes from "./routes/analytics.routes.js";
+import documentRoutes from "./routes/document.routes.js";
+import { errorMiddleware } from "./middleware/error.middleware.js";
+
+export const app = express();
+app.use(cors({ origin: env.clientUrl, credentials: true }));
+app.use(express.json());
+app.use("/uploads", express.static(path.resolve(env.uploadDir)));
+app.get("/", (_request, response) => response.json({ success: true, service: "dayflow-backend", health: "/api/health", api: "/api" }));
+app.get("/api/health", (_request, response) => response.json({ success: true, service: "dayflow-backend" }));
+app.use("/api/auth", authRoutes); app.use("/api/employees", employeeRoutes); app.use("/api/attendance", attendanceRoutes); app.use("/api/leaves", leaveRoutes); app.use("/api/payroll", payrollRoutes); app.use("/api/notifications", notificationRoutes); app.use("/api/analytics", analyticsRoutes); app.use("/api/documents", documentRoutes);
+app.use(errorMiddleware);
