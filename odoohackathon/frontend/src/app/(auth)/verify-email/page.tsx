@@ -1,2 +1,0 @@
-import Link from 'next/link';
-export default function VerifyEmail(){return <div className="auth-form" style={{textAlign:'center'}}><div className="balance-icon" style={{margin:'0 auto 20px',background:'#e2f0e3'}}>✓</div><h1>Check your inbox</h1><p>We sent a verification link to your email address. Once verified, your workspace will be ready.</p><Link className="button button-primary" style={{width:'100%'}} href="/dashboard">Open demo workspace</Link><div className="auth-footer"><Link href="/sign-in">Back to sign in</Link></div></div>}

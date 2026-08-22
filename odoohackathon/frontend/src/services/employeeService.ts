@@ -1,1 +1,0 @@
-import { employees } from '@/lib/data'; export async function getEmployees(){return Promise.resolve(employees);} export async function getEmployee(id:string){return Promise.resolve(employees.find(employee=>employee.id===id)||null);}

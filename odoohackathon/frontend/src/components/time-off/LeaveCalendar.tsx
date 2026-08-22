@@ -1,1 +1,0 @@
-export default function LeaveCalendar(){return <div className="panel empty-page" style={{minHeight:220}}><div><h2>Leave calendar</h2><p>Approved time off will appear on the team calendar.</p></div></div>}

@@ -1,1 +1,0 @@
-export default function EmployeeFilters(){return <select className="filter" defaultValue="All departments"><option>All departments</option><option>Engineering</option><option>Design</option><option>Marketing</option><option>People</option></select>}

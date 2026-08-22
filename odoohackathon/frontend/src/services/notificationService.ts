@@ -1,1 +1,0 @@
-import { mockNotifications } from '@/data/mockNotifications'; export async function getNotifications(){return Promise.resolve(mockNotifications);} export async function markNotificationRead(id:string){const item=mockNotifications.find(notification=>notification.id===id);if(item)item.read=true;return Promise.resolve(item);}

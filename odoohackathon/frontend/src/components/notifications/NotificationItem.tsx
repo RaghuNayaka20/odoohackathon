@@ -1,1 +1,0 @@
-import type { Notification } from '@/types/notification'; export default function NotificationItem({notification,onRead}:{notification:Notification;onRead:()=>void}){return <button className="notification-item" onClick={onRead} data-read={notification.read}><strong>{notification.title}</strong><span>{notification.message}</span><small>{notification.createdAt}</small></button>}

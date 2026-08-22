@@ -1,1 +1,0 @@
-import Topbar from '@/components/layout/Topbar'; export default function SalarySlip(){return <><Topbar title="Salary slips" eyebrow="Payroll / August 2024"/><div className="page-width"><section className="panel empty-page"><div><h2>Salary slips are ready</h2><p>Select a person from the payroll run to view their slip.</p></div></section></div></>}

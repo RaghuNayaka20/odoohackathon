@@ -1,1 +1,0 @@
-import type { LeaveRequest } from '@/types/leave'; export type TimeOffState={requests:LeaveRequest[];loading:boolean;error:string|null}; export const initialTimeOffState:TimeOffState={requests:[],loading:false,error:null};

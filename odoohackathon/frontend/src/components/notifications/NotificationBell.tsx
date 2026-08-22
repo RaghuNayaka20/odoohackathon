@@ -1,1 +1,0 @@
-'use client'; import Link from 'next/link'; import { Bell } from 'lucide-react'; import { useNotifications } from '@/hooks/useNotifications'; export default function NotificationBell(){const {unreadCount}=useNotifications();return <Link className="icon-button notification" href="/notifications" aria-label="Notifications"><Bell size={19}/>{unreadCount>0&&<i/>}</Link>}

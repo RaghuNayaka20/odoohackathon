@@ -1,1 +1,0 @@
-import Topbar from '@/components/layout/Topbar'; export default function Weekly(){return <><Topbar title="Weekly attendance" eyebrow="Attendance / Weekly view"/><div className="page-width"><section className="panel empty-page"><div><h2>Weekly view</h2><p>Your weekly attendance summary will appear here.</p></div></section></div></>}
