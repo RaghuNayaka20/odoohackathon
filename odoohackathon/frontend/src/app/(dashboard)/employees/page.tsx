@@ -1,0 +1,9 @@
+'use client';
+import { useState } from 'react';
+import Link from 'next/link';
+import { Plus, Search } from 'lucide-react';
+import Topbar from '@/components/layout/Topbar';
+import Avatar from '@/components/ui/Avatar';
+import Badge from '@/components/ui/Badge';
+import { employees } from '@/lib/data';
+export default function EmployeesPage() { const [query,setQuery]=useState(''); const shown=employees.filter(e=>`${e.name} ${e.role} ${e.department}`.toLowerCase().includes(query.toLowerCase())); return <><Topbar title="People" eyebrow="Your team, all in one place" /><div className="page-width"><div className="toolbar"><div className="toolbar-left"><div style={{position:'relative'}}><Search size={15} style={{position:'absolute',left:11,top:11,color:'#93a099'}}/><input className="search-input" style={{paddingLeft:32}} placeholder="Search people" value={query} onChange={e=>setQuery(e.target.value)} /></div><select className="filter" defaultValue="All departments"><option>All departments</option><option>Engineering</option><option>Design</option><option>People</option></select></div><Link className="button button-primary" href="/employees/new"><Plus size={16}/>Add person</Link></div><section className="panel table-panel"><table className="data-table"><thead><tr><th>Person</th><th>Department</th><th>Status</th><th>Joined</th><th>Email</th></tr></thead><tbody>{shown.map(person=><tr key={person.id}><td><Link href={`/employees/${person.id}`} className="person-cell"><Avatar initials={person.initials} color={person.color}/><span><strong>{person.name}</strong><small>{person.role}</small></span></Link></td><td>{person.department}</td><td><Badge tone={person.status==='Active'?'green':'amber'}>{person.status}</Badge></td><td>{person.joined}</td><td style={{color:'var(--muted)'}}>{person.email}</td></tr>)}</tbody></table></section></div></> }

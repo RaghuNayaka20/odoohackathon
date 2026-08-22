@@ -1,0 +1,1 @@
+import { mockPayroll } from '@/data/mockPayroll'; export async function getPayroll(){return Promise.resolve(mockPayroll);} export async function getSalarySlip(employeeId:string){return Promise.resolve(mockPayroll.find(record=>record.employeeId===employeeId)||null);}

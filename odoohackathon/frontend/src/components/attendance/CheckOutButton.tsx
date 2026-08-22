@@ -1,0 +1,1 @@
+'use client'; import { useState } from 'react'; import { LogOut } from 'lucide-react'; export default function CheckOutButton(){const [checkedOut,setCheckedOut]=useState(false);return <button className="button button-quiet" onClick={()=>setCheckedOut(true)} disabled={checkedOut}><LogOut size={16}/>{checkedOut?'Checked out':'Check out'}</button>}

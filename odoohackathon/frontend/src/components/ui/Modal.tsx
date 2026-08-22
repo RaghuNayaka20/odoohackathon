@@ -1,0 +1,1 @@
+'use client'; export default function Modal({open,children,onClose}:{open:boolean;children?:React.ReactNode;onClose:()=>void}){if(!open)return null;return <div role="dialog" aria-modal="true" className="modal-backdrop" onClick={onClose}><div className="panel modal" onClick={event=>event.stopPropagation()}>{children}</div></div>}
