@@ -1,9 +1,0 @@
-node_modules/
-.next/
-
-# Local workspace artifacts
-.vscode/
-
-# Accidental nested checkout and root-level npm output
-/odoohackathon/odoohackathon/
-/package-lock.json
