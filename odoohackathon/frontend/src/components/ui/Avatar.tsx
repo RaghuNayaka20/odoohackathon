@@ -1,0 +1,1 @@
+export default function Avatar({ initials, color, small = false }: { initials: string; color?: string; small?: boolean }) { return <span className={`avatar ${small ? 'avatar-small' : ''}`} style={{ backgroundColor: color || '#d7e1d8' }}>{initials}</span>; }
