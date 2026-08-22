@@ -1,0 +1,1 @@
+'use client'; import { useState } from 'react'; import { LogIn } from 'lucide-react'; export default function CheckInButton(){const [checkedIn,setCheckedIn]=useState(false);return <button className="button button-primary" onClick={()=>setCheckedIn(true)} disabled={checkedIn}><LogIn size={16}/>{checkedIn?'Checked in':'Check in'}</button>}

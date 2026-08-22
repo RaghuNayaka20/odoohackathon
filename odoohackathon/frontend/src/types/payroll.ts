@@ -1,0 +1,1 @@
+export type PayrollStatus='Draft'|'Paid'|'Processing'; export type PayrollRecord={id:string;employeeId:string;period:string;basicSalary:number;allowances:number;deductions:number;grossSalary:number;netSalary:number;status:PayrollStatus};

@@ -1,0 +1,1 @@
+import type { Employee } from '@/types/employee'; export type EmployeeState={employees:Employee[];loading:boolean;error:string|null}; export const initialEmployeeState:EmployeeState={employees:[],loading:false,error:null};

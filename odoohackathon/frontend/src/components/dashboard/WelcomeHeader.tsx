@@ -1,0 +1,1 @@
+import { Sparkles } from 'lucide-react'; export default function WelcomeHeader({name='Alex'}:{name?:string}){return <div style={{display:'flex',gap:8,alignItems:'center',color:'var(--muted)',fontSize:12,marginBottom:18}}><Sparkles size={15} color="var(--amber)"/>A clear start to the day, {name}.</div>}

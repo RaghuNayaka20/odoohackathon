@@ -1,0 +1,1 @@
+import type { Employee } from '@/types/employee'; import EmployeeCard from './EmployeeCard'; export default function EmployeeTable({employees}:{employees:Employee[]}){return <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(230px,1fr))',gap:12}}>{employees.map(employee=><EmployeeCard employee={employee} key={employee.id}/>)}</div>}

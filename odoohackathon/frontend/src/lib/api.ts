@@ -1,0 +1,2 @@
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || '';
+export async function apiRequest<T>(path:string, options:RequestInit={}){if(!API_BASE_URL) throw new Error('API is not configured; use the mock service.');const response=await fetch(`${API_BASE_URL}${path}`,{...options,headers:{'Content-Type':'application/json',...options.headers}});if(!response.ok)throw new Error('The request could not be completed.');return response.json() as Promise<T>;}

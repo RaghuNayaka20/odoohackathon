@@ -1,0 +1,1 @@
+export type LeaveStatus = 'Pending' | 'Approved' | 'Rejected' | 'Cancelled'; export type LeaveRequest = { id:string; employeeId:string; type:string; from:string; to:string; days:number; reason:string; status:LeaveStatus };
